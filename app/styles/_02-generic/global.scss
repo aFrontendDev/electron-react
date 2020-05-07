@@ -1,0 +1,26 @@
+html {
+  font-family: sans-serif;
+  background-color: $bgColorA;
+  color: $colorText;
+
+  @media (min-width: #{$bpcEM}em) {
+    background-color: red;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.body {
+  min-height: 100vh;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}

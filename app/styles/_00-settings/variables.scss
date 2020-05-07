@@ -1,0 +1,63 @@
+// colours
+$blue: #0a91e0;
+$light-blue: #50bdfd;
+$dark-blue: #0a5ce0;
+$yellow: #d7da19;
+$green: #48da17;
+
+$white: #fff;
+$black: #000;
+$bgColorA: #ccc;
+$colorText: #333;
+
+// dimensions
+$max-width: 800px;
+$vr: 5px; // vertical rhythm
+$gw: 10px; // gutter width
+
+// typography
+$sans-serif: 'Roboto', sans-serif;
+$serif: 'Georgia Pro', Georgia, Times, serif;
+$mono: 'Anonymous Pro', 'Droid Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas,
+  'Lucida Console', Courier, monospace;
+$font-family-base: $sans-serif;
+
+// Font Sizing
+$font-reg: 16px;
+$font-small: 14px;
+
+$font-weight-black: 900;
+$font-weight-xbold: 800;
+$font-weight-bold: 700;
+$font-weight-semibold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+$font-weight-thin: 200;
+$font-weight-ultra-thin: 100;
+
+// Media Query Break Points (px & em)
+$break-point-a-px: 320px;
+$bpaEM: 320 / 16;
+
+$break-point-b-px: 480px;
+$bpbEM: 480 / 16;
+
+$break-point-c-px: 660px;
+$bpcEM: 660 / 16;
+
+$break-point-d-px: 768px;
+$bpdEM: 768 / 16;
+
+$break-point-e-px: 1024px;
+$bpeEM: 1024 / 16;
+
+$break-point-f-px: 1220px;
+$bpfEM: 1220 / 16;
+
+$break-point-g-px: 1480px;
+$bpgEM: 1480 / 16;
+
+$break-point-h-px: 1920px;
+$break-point-h-em-val: 1920 / 16;
+$bphEM: 1920 / 16;
