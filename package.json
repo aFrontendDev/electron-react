@@ -274,6 +274,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
     "@hot-loader/react-dom": "^16.13.0",
+    "autoprefixer": "^9.7.6",
     "connected-react-router": "^6.8.0",
     "core-js": "^3.6.5",
     "devtron": "^1.4.0",
@@ -281,6 +282,8 @@
     "electron-log": "^4.0.6",
     "electron-updater": "^4.2.0",
     "history": "^4.10.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-pxtorem": "^5.1.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-hot-loader": "^4.12.19",
@@ -298,6 +301,12 @@
   },
   "collective": {
     "url": "https://opencollective.com/electron-react-boilerplate-594"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {},
+      "postcss-pxtorem": {}
+    }
   },
   "browserslist": [
     "electron 8.0.0"

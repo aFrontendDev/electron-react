@@ -73,6 +73,9 @@ export default merge.smart(baseConfig, {
             options: {
               sourceMap: true
             }
+          },
+          {
+            loader: 'postcss-loader'
           }
         ]
       },
@@ -91,6 +94,9 @@ export default merge.smart(baseConfig, {
               sourceMap: true,
               importLoaders: 1
             }
+          },
+          {
+            loader: 'postcss-loader'
           }
         ]
       },
@@ -109,6 +115,9 @@ export default merge.smart(baseConfig, {
           },
           {
             loader: 'sass-loader'
+          },
+          {
+            loader: 'postcss-loader'
           }
         ]
       },
@@ -131,6 +140,9 @@ export default merge.smart(baseConfig, {
           },
           {
             loader: 'sass-loader'
+          },
+          {
+            loader: 'postcss-loader'
           }
         ]
       },

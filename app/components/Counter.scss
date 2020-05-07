@@ -31,6 +31,14 @@
   font-family: Arial, Helvetica, Helvetica Neue, sans-serif;
 }
 
+.input {
+  color: #000;
+
+  &::placeholder {
+    color: red;
+  }
+}
+
 .btn:hover {
   color: white;
   background-color: rgba(0, 0, 0, 0.5);

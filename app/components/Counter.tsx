@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import styles from './Counter.css';
+import styles from './Counter.scss';
 import routes from '../constants/routes.json';
 
 type Props = {
@@ -11,7 +11,7 @@ type Props = {
   counter: number;
 };
 
-export default function Counter(props: Props) {
+const Counter = (props: Props) => {
   const {
     increment,
     incrementIfOdd,
@@ -22,6 +22,7 @@ export default function Counter(props: Props) {
 
   return (
     <div>
+      <input className={styles.input} type="text" placeholder="some text" />
       <div className={styles.backButton} data-tid="backButton">
         <Link to={routes.HOME}>
           <i className="fa fa-arrow-left fa-3x" />
@@ -66,4 +67,6 @@ export default function Counter(props: Props) {
       </div>
     </div>
   );
-}
+};
+
+export default Counter;
