@@ -300,7 +300,7 @@
     "url": "https://opencollective.com/electron-react-boilerplate-594"
   },
   "browserslist": [
-    "extends browserslist-config-erb"
+    "electron 8.0.0"
   ],
   "prettier": {
     "overrides": [
