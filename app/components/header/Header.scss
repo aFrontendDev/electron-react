@@ -1,0 +1,20 @@
+@import '../../styles/_00-settings/variables.scss';
+
+.header {
+  width: 100%;
+  padding: $vr * 3 $ggw;
+  background-color: $white;
+  display: flex;
+  justify-content: space-between;
+}
+
+.icon {
+  width: 34px;
+  height: 34px;
+  color: $black;
+}
+
+.title {
+  font-size: 18px;
+  line-height: $vr * 6;
+}

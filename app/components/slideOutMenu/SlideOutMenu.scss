@@ -1,0 +1,39 @@
+@import '../../styles/_00-settings/variables.scss';
+
+.container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: translateX(-101%);
+  width: 100%;
+  background: $white;
+  z-index: 9;
+  transition: transform 200ms ease-in-out;
+
+  &.container--open {
+    transform: none;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  padding: $vr * 3 $ggw;
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  color: $black;
+}
+
+.nav {
+  padding: $vr * 3 $ggw;
+
+  a {
+    display: block;
+    margin: $vr 0;
+  }
+}

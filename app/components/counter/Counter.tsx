@@ -38,7 +38,7 @@ const Counter = (props: Props) => {
           data-tclass="btn"
           type="button"
         >
-          <i className="fa fa-plus" />
+          +
         </button>
         <button
           className={styles.btn}
@@ -46,7 +46,7 @@ const Counter = (props: Props) => {
           data-tclass="btn"
           type="button"
         >
-          <i className="fa fa-minus" />
+          -
         </button>
         <button
           className={styles.btn}

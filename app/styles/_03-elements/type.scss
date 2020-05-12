@@ -1,15 +1,14 @@
 p {
-  font-size: $font-reg;
+  font-size: $fontReg;
   line-height: $vr * 5;
 }
 
 a {
-  color: $light-blue;
-  transition: color 250ms ease;
+  color: $lightBlue;
+  text-decoration: none;
 
   &:hover,
   &:focus {
-    color: $white;
     text-decoration: underline;
   }
 }
