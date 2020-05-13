@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "outDir": "../app/webdist/",
+    "sourceMap": false,
+    "noImplicitAny": false,
+    "module": "commonjs",
+    "target": "es6",
+    "jsx": "react"
+  }
+}

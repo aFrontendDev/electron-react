@@ -5,7 +5,7 @@ const app = express();
 // Used to parse JSON bodies
 app.use(express.json());
 app.use(express.urlencoded());
-app.use(express.static('dist'));
+app.use(express.static('webdist'));
 
 // server configuration
 const PORT = 9001;
