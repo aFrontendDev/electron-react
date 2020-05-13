@@ -3,6 +3,11 @@
 exports[`Counter component should match exact snapshot 1`] = `
 <div>
   <div>
+    <input
+      className="input"
+      placeholder="some text"
+      type="text"
+    />
     <div
       className="backButton"
       data-tid="backButton"
@@ -31,9 +36,7 @@ exports[`Counter component should match exact snapshot 1`] = `
         onClick={[Function]}
         type="button"
       >
-        <i
-          className="fa fa-plus"
-        />
+        +
       </button>
       <button
         className="btn"
@@ -41,9 +44,7 @@ exports[`Counter component should match exact snapshot 1`] = `
         onClick={[Function]}
         type="button"
       >
-        <i
-          className="fa fa-minus"
-        />
+        -
       </button>
       <button
         className="btn"

@@ -26,7 +26,12 @@ const Header = (props: Props) => {
 
   return (
     <header className={styles.header} data-tid="header">
-      <button type="button" className={styles.icon} onClick={handleMenuClick}>
+      <button
+        data-test-id="menu-btn"
+        type="button"
+        className={styles.icon}
+        onClick={handleMenuClick}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fillRule="evenodd"
