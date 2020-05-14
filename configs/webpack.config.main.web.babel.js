@@ -1,18 +1,9 @@
-// import merge from 'webpack-merge';
-// import baseConfig from './webpack.config.base';
-
-import webpack from 'webpack';
-import { dependencies as externals } from '../app/package.json';
-
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  // export default merge.smart(baseConfig, {
-  // externals: [...Object.keys(externals || {})],
-
   entry: {
     app: './app/index.tsx'
   },
@@ -135,7 +126,5 @@ module.exports = {
   output: {
     path: path.join(__dirname, '../app/webdist'),
     filename: 'renderer.min.js'
-    // libraryTarget: 'commonjs'
   }
 };
-// });

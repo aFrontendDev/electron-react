@@ -4,16 +4,21 @@ export type counterStateType = {
   counter: number;
 };
 
-export type menuStateType = {
-  menu: {
-    menuOpen: boolean;
-  };
+export type menuItemsType = {
+  menuOpen: boolean;
 };
 
-export type GetState = () => {
-  return(counterStateType, menuStateType);
+export type menuStateType = {
+  menu: menuItemsType;
 };
+
+export type allState = {
+  counter: counterStateType;
+  menu: menuStateType;
+};
+
+export type GetState = () => allState;
 
 export type Dispatch = ReduxDispatch<Action<string>>;
 
-export type Store = ReduxStore<counterStateType, menuStateType, Action<string>>;
+export type Store = ReduxStore<allState, Action<string>>;
