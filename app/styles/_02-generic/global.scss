@@ -4,7 +4,7 @@ html {
   color: $colorText;
 
   @media (min-width: #{$bpcEM}em) {
-    background-color: red;
+    background-color: $bgColorB;
   }
 
   * {
