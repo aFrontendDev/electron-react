@@ -1,13 +1,12 @@
-export const OPEN_MENU = 'OPEN_MENU';
-export const CLOSE_MENU = 'CLOSE_MENU';
+import { OPEN_MENU, CLOSE_MENU, MenuActionTypes } from '../types/menu';
 
-export const openMenu = () => {
+export const OpenMenu = (): MenuActionTypes => {
   return {
     type: OPEN_MENU
   };
 };
 
-export const closeMenu = () => {
+export const CloseMenu = (): MenuActionTypes => {
   return {
     type: CLOSE_MENU
   };

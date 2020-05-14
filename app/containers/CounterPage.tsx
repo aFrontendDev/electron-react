@@ -2,29 +2,30 @@ import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import Counter from '../components/counter/Counter';
 import {
-  increment,
-  decrement,
-  incrementIfOdd,
-  incrementAsync
+  IncrementAction,
+  DecrementAction,
+  IncrementIfOdd,
+  IncrementAsyncAction
 } from '../actions/counter';
-import { counterStateType } from '../reducers/types';
+import { AllState } from '../types/_all';
 
-function mapStateToProps(state: counterStateType) {
+const mapStateToProps = (state: AllState) => {
+  const { counter } = state;
   return {
-    counter: state.counter
+    count: counter.count
   };
-}
+};
 
-function mapDispatchToProps(dispatch: Dispatch) {
+const mapDispatchToProps = (dispatch: Dispatch) => {
   return bindActionCreators(
     {
-      increment,
-      decrement,
-      incrementIfOdd,
-      incrementAsync
+      IncrementAction,
+      DecrementAction,
+      IncrementIfOdd,
+      IncrementAsyncAction
     },
     dispatch
   );
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

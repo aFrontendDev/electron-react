@@ -4,37 +4,35 @@ import styles from './Counter.scss';
 import routes from '../../constants/routes.json';
 
 type Props = {
-  increment: () => void;
-  incrementIfOdd: () => void;
-  incrementAsync: () => void;
-  decrement: () => void;
-  counter: number;
+  IncrementAction: () => void;
+  IncrementIfOdd: () => void;
+  IncrementAsyncAction: (delay?: number) => void;
+  DecrementAction: () => void;
+  count: number;
 };
 
 const Counter = (props: Props) => {
   const {
-    increment,
-    incrementIfOdd,
-    incrementAsync,
-    decrement,
-    counter
+    IncrementAction,
+    IncrementIfOdd,
+    IncrementAsyncAction,
+    DecrementAction,
+    count
   } = props;
 
   return (
     <div>
       <input className={styles.input} type="text" placeholder="some text" />
       <div className={styles.backButton} data-tid="backButton">
-        <Link to={routes.HOME}>
-          <i className="fa fa-arrow-left fa-3x" />
-        </Link>
+        <Link to={routes.HOME}>BACK</Link>
       </div>
       <div className={`counter ${styles.counter}`} data-tid="counter">
-        {counter}
+        {count}
       </div>
       <div className={styles.btnGroup}>
         <button
           className={styles.btn}
-          onClick={increment}
+          onClick={IncrementAction}
           data-tclass="btn"
           type="button"
         >
@@ -42,7 +40,7 @@ const Counter = (props: Props) => {
         </button>
         <button
           className={styles.btn}
-          onClick={decrement}
+          onClick={DecrementAction}
           data-tclass="btn"
           type="button"
         >
@@ -50,7 +48,7 @@ const Counter = (props: Props) => {
         </button>
         <button
           className={styles.btn}
-          onClick={incrementIfOdd}
+          onClick={IncrementIfOdd}
           data-tclass="btn"
           type="button"
         >
@@ -58,7 +56,7 @@ const Counter = (props: Props) => {
         </button>
         <button
           className={styles.btn}
-          onClick={() => incrementAsync()}
+          onClick={() => IncrementAsyncAction()}
           data-tclass="btn"
           type="button"
         >

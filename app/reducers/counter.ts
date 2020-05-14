@@ -1,12 +1,34 @@
 import { Action } from 'redux';
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../actions/counter';
+import {
+  INCREMENT_COUNTER,
+  DECREMENT_COUNTER,
+  CounterType
+} from '../types/counter';
 
-export default function counter(state = 0, action: Action<string>) {
+const initialState: CounterType = {
+  count: 0
+};
+export default function counterReducer(
+  state = initialState,
+  action: Action<string>
+) {
   switch (action.type) {
-    case INCREMENT_COUNTER:
-      return state + 1;
-    case DECREMENT_COUNTER:
-      return state - 1;
+    case INCREMENT_COUNTER: {
+      const { count } = state;
+      const newCounterVal = count + 1;
+      return {
+        ...state,
+        count: newCounterVal
+      };
+    }
+    case DECREMENT_COUNTER: {
+      const { count } = state;
+      const newCounterVal = count - 1;
+      return {
+        ...state,
+        count: newCounterVal
+      };
+    }
     default:
       return state;
   }

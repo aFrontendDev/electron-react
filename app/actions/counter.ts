@@ -1,36 +1,39 @@
 import { GetState, Dispatch } from '../reducers/types';
+import {
+  INCREMENT_COUNTER,
+  DECREMENT_COUNTER,
+  CounterActionTypes
+} from '../types/counter';
 
-export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
-export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
-
-export function increment() {
+export const IncrementAction = (): CounterActionTypes => {
   return {
     type: INCREMENT_COUNTER
   };
-}
+};
 
-export function decrement() {
+export const DecrementAction = (): CounterActionTypes => {
   return {
     type: DECREMENT_COUNTER
   };
-}
+};
 
-export function incrementIfOdd() {
+export const IncrementIfOdd = () => {
   return (dispatch: Dispatch, getState: GetState) => {
     const { counter } = getState();
+    const { count } = counter;
 
-    if (counter % 2 === 0) {
+    if (count % 2 === 0) {
       return;
     }
 
-    dispatch(increment());
+    dispatch(IncrementAction());
   };
-}
+};
 
-export function incrementAsync(delay = 1000) {
+export const IncrementAsyncAction = (delay?: number) => {
   return (dispatch: Dispatch) => {
     setTimeout(() => {
-      dispatch(increment());
-    }, delay);
+      dispatch(IncrementAction());
+    }, delay || 1000);
   };
-}
+};

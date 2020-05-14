@@ -2,8 +2,8 @@ import React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { closeMenu } from '../../actions/menu';
-import { menuStateType } from '../../reducers/types';
+import { CloseMenu } from '../../actions/menu';
+import { AllState } from '../../types/_all';
 import routes from '../../constants/routes.json';
 import styles from './SlideOutMenu.scss';
 
@@ -47,14 +47,14 @@ const SlideOutMenu = (props: Props) => {
   );
 };
 
-const mapStateToProps = (state: menuStateType) => {
+const mapStateToProps = (state: AllState) => {
   return {
     menuOpen: state.menu.menuOpen
   };
 };
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
-  return bindActionCreators({ dispatchCloseMenu: closeMenu }, dispatch);
+  return bindActionCreators({ dispatchCloseMenu: CloseMenu }, dispatch);
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(SlideOutMenu);

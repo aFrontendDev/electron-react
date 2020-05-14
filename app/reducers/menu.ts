@@ -1,5 +1,5 @@
 import { Action } from 'redux';
-import { OPEN_MENU, CLOSE_MENU } from '../actions/menu';
+import { OPEN_MENU, CLOSE_MENU } from '../types/menu';
 
 type menuState = {
   menuOpen: boolean;

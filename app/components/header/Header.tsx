@@ -2,8 +2,8 @@ import React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { openMenu, closeMenu } from '../../actions/menu';
-import { menuStateType } from '../../reducers/types';
+import { OpenMenu, CloseMenu } from '../../actions/menu';
+import { AllState } from '../../types/_all';
 import routes from '../../constants/routes.json';
 import styles from './Header.scss';
 
@@ -50,7 +50,7 @@ const Header = (props: Props) => {
   );
 };
 
-const mapStateToProps = (state: menuStateType) => {
+const mapStateToProps = (state: AllState) => {
   return {
     menuOpen: state.menu.menuOpen
   };
@@ -59,8 +59,8 @@ const mapStateToProps = (state: menuStateType) => {
 const mapDispatchToProps = (dispatch: Dispatch) => {
   return bindActionCreators(
     {
-      dispatchOpenMenu: openMenu,
-      dispatchCloseMenu: closeMenu
+      dispatchOpenMenu: OpenMenu,
+      dispatchCloseMenu: CloseMenu
     },
     dispatch
   );
