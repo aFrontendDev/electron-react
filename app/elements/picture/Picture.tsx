@@ -5,14 +5,17 @@ type Props = {
   imgLoaded?: () => void;
   altText?: string;
   smallImg?: string;
-  largeImg: string;
+  largeImg?: string;
 };
 
 const Picture = (props: Props) => {
   const { largeImg, smallImg, altText, imgLoaded } = props;
-  console.log({ props });
   const large = largeImg || smallImg;
   const small = smallImg || largeImg;
+
+  if (!large && !small) {
+    return null;
+  }
 
   const handleImgLoaded = () => {
     if (imgLoaded && typeof imgLoaded === 'function') {
