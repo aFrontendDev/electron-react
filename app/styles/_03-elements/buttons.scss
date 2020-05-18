@@ -4,6 +4,11 @@
   margin-bottom: $vr * 2;
 }
 
+.btn[disabled],
+button[disabled] {
+  cursor: auto;
+}
+
 .btn--primary {
   background: none;
   padding: $vr * 2 $ggw;

@@ -6,7 +6,7 @@ type Props = {
   primary?: boolean;
   secondary?: boolean;
   disabled?: boolean;
-  type?: string;
+  type?: 'button' | 'submit' | 'reset';
   children?: ReactNode;
 };
 

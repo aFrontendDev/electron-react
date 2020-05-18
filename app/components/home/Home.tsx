@@ -26,6 +26,11 @@ const Home = () => {
           this is a secondary button
         </Btn>
       </div>
+      <div>
+        <Btn disabled clickHandler={() => console.log('disabled click')}>
+          this is a disabled button
+        </Btn>
+      </div>
 
       <div className={styles['img-container']}>
         <figure className={styles['img-fig']}>
