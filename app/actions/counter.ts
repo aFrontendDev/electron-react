@@ -3,7 +3,7 @@ import {
   INCREMENT_COUNTER,
   DECREMENT_COUNTER,
   CounterActionTypes
-} from '../types/counter';
+} from '../types/counter.type';
 
 export const IncrementAction = (): CounterActionTypes => {
   return {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import routes from '../../constants/routes.json';
 import styles from './Home.scss';
@@ -6,8 +6,29 @@ import Picture from '../../elements/picture/Picture';
 import electronImg from '../../assets/images/electron.png';
 import Btn from '../../elements/btn/Btn';
 import { ReactComponent as IconParty } from '../../assets/icons/party.svg';
+import { getReq } from '../../helpers/fetch.helper';
 
 const Home = () => {
+  const [randomData, setRandomData] = useState(null);
+
+  const getData = async () => {
+    const data = await getReq({ url: 'https://reqres.in/api/users?page=2' });
+    if (data.status === 200) {
+      setRandomData(data.content);
+    }
+  };
+
+  useEffect(() => {
+    // did mount
+    console.log('mount - randomData', randomData);
+    getData();
+  }, []);
+
+  useEffect(() => {
+    // update
+    console.log('update - randomData', randomData);
+  }, [randomData]);
+
   return (
     <div className={styles.container} data-tid="container">
       <h2>Home</h2>

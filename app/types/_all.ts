@@ -1,5 +1,5 @@
-import { CounterType } from './counter';
-import { MenuType } from './menu';
+import { CounterType } from './counter.type';
+import { MenuType } from './menu.type';
 
 export type AllState = {
   counter: CounterType;

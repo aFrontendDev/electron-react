@@ -3,7 +3,7 @@ import {
   INCREMENT_COUNTER,
   DECREMENT_COUNTER,
   CounterType
-} from '../types/counter';
+} from '../types/counter.type';
 
 const initialState: CounterType = {
   count: 0
