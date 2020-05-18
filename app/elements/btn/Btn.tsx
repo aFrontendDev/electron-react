@@ -17,7 +17,8 @@ const Btn = (props: Props) => {
     disabled,
     type = 'button',
     clickHandler,
-    children
+    children,
+    ...rest
   } = props;
 
   const btnMarkup = (style?: string) => (
@@ -26,7 +27,7 @@ const Btn = (props: Props) => {
       disabled={disabled}
       onClick={clickHandler}
       className={`btn ${style}`}
-      {...props}
+      {...rest}
     >
       {children}
     </button>

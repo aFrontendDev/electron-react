@@ -102,6 +102,18 @@ module.exports = {
             }
           }
         ]
+      },
+      // inline SVG from files
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              dimensions: false
+            }
+          }
+        ]
       }
     ]
   },

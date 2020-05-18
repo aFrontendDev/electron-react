@@ -5,12 +5,17 @@ import styles from './Home.scss';
 import Picture from '../../elements/picture/Picture';
 import electronImg from '../../assets/images/electron.png';
 import Btn from '../../elements/btn/Btn';
+import { ReactComponent as IconParty } from '../../assets/icons/party.svg';
 
 const Home = () => {
   return (
     <div className={styles.container} data-tid="container">
       <h2>Home</h2>
       <Link to={routes.COUNTER}>to Counter</Link>
+
+      <div className={styles.icon}>
+        <IconParty />
+      </div>
 
       <h3>Button examples</h3>
       <div>
@@ -47,14 +52,6 @@ const Home = () => {
             smallImg="https://placeimg.com/320/250/tech"
             altText="random img"
             imgLoaded={() => console.log('loaded 2')}
-          />
-        </figure>
-
-        <figure className={styles['img-fig']}>
-          <Picture
-            largeImg="fgdgdfg"
-            imgLoaded={() => console.log('loaded 3')}
-            imgFailed={() => console.log('fail')}
           />
         </figure>
       </div>

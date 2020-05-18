@@ -146,6 +146,18 @@ export default merge.smart(baseConfig, {
           }
         ]
       },
+      // inline SVG from files
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              dimensions: false
+            }
+          }
+        ]
+      },
       // WOFF Font
       {
         test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
