@@ -1,9 +1,38 @@
-.btn--unstyled,
-button {
+.btn {
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: $vr * 2;
+}
+
+.btn--primary {
+  background: none;
+  padding: $vr * 2 $ggw;
+  background-color: $white;
+  border: solid 1px $black;
+  color: $black;
+
+  &:hover,
+  &:focus {
+    background-color: darken($white, 20%);
+  }
+}
+
+.btn--secondary {
+  background: none;
+  padding: $vr * 2 $ggw;
+  background-color: $black;
+  border: solid 1px $white;
+  color: $white;
+
+  &:hover,
+  &:focus {
+    background-color: lighten($black, 20%);
+  }
+}
+
+.btn--unstyled {
   margin: 0;
   padding: 0;
   background: none;
-  cursor: pointer;
   border: none;
-  font-size: 16px;
 }

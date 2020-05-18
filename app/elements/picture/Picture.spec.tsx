@@ -1,11 +1,7 @@
 /* eslint react/jsx-props-no-spreading: off */
-import { spy } from 'sinon';
 import React from 'react';
-import { Provider } from 'react-redux';
-import Enzyme, { shallow, mount } from 'enzyme';
+import Enzyme, { shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-import { BrowserRouter as Router } from 'react-router-dom';
-import { configureStore } from '../../store/configureStore';
 import Picture from './Picture';
 
 Enzyme.configure({ adapter: new Adapter() });

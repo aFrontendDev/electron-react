@@ -4,12 +4,29 @@ import routes from '../../constants/routes.json';
 import styles from './Home.scss';
 import Picture from '../../elements/picture/Picture';
 import electronImg from '../../assets/images/electron.png';
+import Btn from '../../elements/btn/Btn';
 
 const Home = () => {
   return (
     <div className={styles.container} data-tid="container">
       <h2>Home</h2>
       <Link to={routes.COUNTER}>to Counter</Link>
+
+      <h3>Button examples</h3>
+      <div>
+        <Btn>this is a basic button</Btn>
+      </div>
+      <div>
+        <Btn primary clickHandler={() => console.log('click')}>
+          this is a primary button
+        </Btn>
+      </div>
+      <div>
+        <Btn secondary data-test="spread extra props">
+          this is a secondary button
+        </Btn>
+      </div>
+
       <div className={styles['img-container']}>
         <figure className={styles['img-fig']}>
           <Picture
