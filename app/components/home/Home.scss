@@ -1,11 +1,9 @@
 @import '../../styles/_00-settings/variables.scss';
 
 .container {
-  position: absolute;
-  top: 30%;
-  left: 10px;
-  text-align: center;
-  display: grid;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
 
   h2 {
     font-size: 50px;

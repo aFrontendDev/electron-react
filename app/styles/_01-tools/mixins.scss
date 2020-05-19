@@ -2,3 +2,26 @@
 @mixin fluidWidth($target, $context) {
   width: 100% * ($target / $context);
 }
+
+@mixin fluidMarginRight($target, $context) {
+  margin-right: 100% * ($target / $context);
+}
+
+@mixin fluidMarginLeft($target, $context) {
+  margin-left: 100% * ($target / $context);
+}
+
+@mixin fluidPaddingRight($target, $context) {
+  padding-right: 100% * ($target / $context);
+}
+
+@mixin fluidPaddingLeft($target, $context) {
+  padding-left: 100% * ($target / $context);
+}
+
+@mixin blockWidth($cols) {
+  @include fluidWidth(
+    (($colWidth * $cols) + ($ggw * ($cols - 1))),
+    $layoutWidthInner
+  );
+}

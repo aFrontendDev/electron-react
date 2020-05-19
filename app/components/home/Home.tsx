@@ -39,15 +39,15 @@ const Home = () => {
       </div>
 
       <h3>Button examples</h3>
-      <div>
+      <div className="block block--full">
         <Btn>this is a basic button</Btn>
       </div>
-      <div>
+      <div className="block block--half">
         <Btn primary clickHandler={() => console.log('click')}>
           this is a primary button
         </Btn>
       </div>
-      <div>
+      <div className="block block--half">
         <Btn secondary data-test="spread extra props">
           this is a secondary button
         </Btn>

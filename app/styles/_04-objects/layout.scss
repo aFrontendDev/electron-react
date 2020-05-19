@@ -5,7 +5,7 @@
     max-width: $layoutMaxWidth;
     margin: 0 $ggw;
 
-    @media (min-width: #{$bpeEM}em) {
+    @media (min-width: #{$bpdEM}em) {
       margin: 0 auto;
     }
   }
@@ -14,11 +14,35 @@
 .layout__inner {
   display: flex;
   flex-wrap: wrap;
-  width: $layoutWidthInner;
-  width: $layoutMaxWidth;
   width: 100%;
 
-  @media (min-width: #{$bpeEM}em) {
+  @media (min-width: #{$bpdEM}em) {
     @include fluidWidth($layoutWidthInner, $layoutMaxWidth);
+  }
+}
+
+.block {
+  width: 100%;
+
+  @media (min-width: #{$bpdEM}em) {
+    @include fluidMarginRight($ggw, $layoutWidthInner);
+  }
+}
+
+.block--full {
+  @media (min-width: #{$bpdEM}em) {
+    @include blockWidth(12);
+  }
+}
+
+.block--half {
+  @media (min-width: #{$bpdEM}em) {
+    @include blockWidth(6);
+  }
+}
+
+.block--quarter {
+  @media (min-width: #{$bpdEM}em) {
+    @include blockWidth(3);
   }
 }
