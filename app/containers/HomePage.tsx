@@ -1,6 +1,13 @@
 import React from 'react';
-import Home from '../components/home/Home';
+import Home from 'components/home/Home';
+import LayoutA from './LayoutA';
 
-export default function HomePage() {
-  return <Home />;
-}
+const HomePage = () => {
+  return (
+    <LayoutA>
+      <Home />
+    </LayoutA>
+  );
+};
+
+export default HomePage;

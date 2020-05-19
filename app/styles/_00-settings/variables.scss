@@ -12,9 +12,13 @@ $bgColorB: #7d7d7d;
 $colorText: #333;
 
 // dimensions
-$maxWidth: 1600px;
-$vr: 5px; // vertical rhythm
-$ggw: 10px; // gutter width
+$layoutMaxWidth: 1440px;
+$vr: 8px; // vertical rhythm
+$ggw: 24px; // grid gutter width
+$colWidth: 98px;
+$cols: 12;
+$layoutWidth: ($colWidth * $cols) + ($ggw * $cols);
+$layoutWidthInner: $layoutWidth + $ggw;
 
 // typography
 $sansSerif: 'Roboto', sans-serif;

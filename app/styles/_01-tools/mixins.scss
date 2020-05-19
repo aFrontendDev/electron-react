@@ -1,1 +1,4 @@
 /* stylelint-disable */
+@mixin fluidWidth($target, $context) {
+  width: 100% * ($target / $context);
+}

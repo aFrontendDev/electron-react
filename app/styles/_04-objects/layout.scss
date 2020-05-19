@@ -1,1 +1,24 @@
 /* stylelint-disable */
+
+.layout {
+  &.layout--a {
+    max-width: $layoutMaxWidth;
+    margin: 0 $ggw;
+
+    @media (min-width: #{$bpeEM}em) {
+      margin: 0 auto;
+    }
+  }
+}
+
+.layout__inner {
+  display: flex;
+  flex-wrap: wrap;
+  width: $layoutWidthInner;
+  width: $layoutMaxWidth;
+  width: 100%;
+
+  @media (min-width: #{$bpeEM}em) {
+    @include fluidWidth($layoutWidthInner, $layoutMaxWidth);
+  }
+}

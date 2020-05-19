@@ -157,7 +157,8 @@
     ],
     "moduleDirectories": [
       "node_modules",
-      "app/node_modules"
+      "app/node_modules",
+      "app"
     ],
     "setupFiles": [
       "./internals/scripts/CheckBuildsExist.js"

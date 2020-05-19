@@ -1,5 +1,8 @@
 import counterReducer from '../../app/reducers/counter';
-import { INCREMENT_COUNTER, DECREMENT_COUNTER } from '../../app/types/counter';
+import {
+  INCREMENT_COUNTER,
+  DECREMENT_COUNTER
+} from '../../app/types/counter.type';
 
 describe('reducers', () => {
   describe('counter', () => {

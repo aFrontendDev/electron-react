@@ -1,6 +1,6 @@
 import { spy } from 'sinon';
 import * as actions from '../../app/actions/counter';
-import { INCREMENT_COUNTER } from '../../app/types/counter';
+import { INCREMENT_COUNTER } from '../../app/types/counter.type';
 
 describe('actions', () => {
   it('should increment should create increment action', () => {
