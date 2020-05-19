@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import routes from '../../constants/routes.json';
+import Btn from 'elements/btn/Btn';
+import { getReq } from 'helpers/fetch.helper';
+import routes from 'constants/routes.json';
+import Picture from 'elements/picture/Picture';
+import electronImg from 'assets/images/electron.png';
+import { ReactComponent as IconParty } from 'assets/icons/party.svg';
 import styles from './Home.scss';
-import Picture from '../../elements/picture/Picture';
-import electronImg from '../../assets/images/electron.png';
-import Btn from '../../elements/btn/Btn';
-import { ReactComponent as IconParty } from '../../assets/icons/party.svg';
-import { getReq } from '../../helpers/fetch.helper';
 
 const Home = () => {
   const [randomData, setRandomData] = useState(null);

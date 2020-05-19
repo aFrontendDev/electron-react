@@ -2,9 +2,9 @@ import React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { OpenMenu, CloseMenu } from '../../actions/menu';
-import { AllState } from '../../types/_all';
-import routes from '../../constants/routes.json';
+import { OpenMenu, CloseMenu } from 'actions/menu';
+import { AllState } from 'types/_all';
+import routes from 'constants/routes.json';
 import styles from './Header.scss';
 
 type Props = {
@@ -52,7 +52,7 @@ const Header = (props: Props) => {
 
 const mapStateToProps = (state: AllState) => {
   return {
-    menuOpen: state.menu.menuOpen
+    menuOpen: state?.menu?.menuOpen
   };
 };
 

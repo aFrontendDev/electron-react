@@ -2,9 +2,9 @@ import React from 'react';
 import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { CloseMenu } from '../../actions/menu';
-import { AllState } from '../../types/_all';
-import routes from '../../constants/routes.json';
+import { CloseMenu } from 'actions/menu';
+import { AllState } from 'types/_all';
+import routes from 'constants/routes.json';
 import styles from './SlideOutMenu.scss';
 
 type Props = {
