@@ -5,7 +5,7 @@ import { getReq } from 'helpers/fetch.helper';
 import routes from 'constants/routes.json';
 import Picture from 'elements/picture/Picture';
 import electronImg from 'assets/images/electron.png';
-import { ReactComponent as IconParty } from 'assets/icons/party.svg';
+// import { ReactComponent as IconParty } from 'assets/icons/party.svg';
 import styles from './Home.scss';
 
 const Home = () => {
@@ -34,9 +34,9 @@ const Home = () => {
       <h2>Home</h2>
       <Link to={routes.COUNTER}>to Counter</Link>
 
-      <div className={styles.icon}>
+      {/* <div className={styles.icon}>
         <IconParty />
-      </div>
+      </div> */}
 
       <h3>Button examples</h3>
       <div>

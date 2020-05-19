@@ -114,6 +114,11 @@ module.exports = {
             }
           }
         ]
+      },
+      // Common Image Formats
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg|webp)$/,
+        use: 'url-loader'
       }
     ]
   },
