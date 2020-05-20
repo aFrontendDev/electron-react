@@ -114,10 +114,10 @@ export default merge.smart(baseConfig, {
             }
           },
           {
-            loader: 'sass-loader'
+            loader: 'postcss-loader'
           },
           {
-            loader: 'postcss-loader'
+            loader: 'sass-loader'
           }
         ]
       },
@@ -139,10 +139,10 @@ export default merge.smart(baseConfig, {
             }
           },
           {
-            loader: 'sass-loader'
+            loader: 'postcss-loader'
           },
           {
-            loader: 'postcss-loader'
+            loader: 'sass-loader'
           }
         ]
       },

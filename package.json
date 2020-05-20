@@ -317,7 +317,9 @@
   "postcss": {
     "plugins": {
       "autoprefixer": {},
-      "postcss-pxtorem": {}
+      "postcss-pxtorem": {
+        "propList": ["*"]
+      }
     }
   },
   "browserslist": [

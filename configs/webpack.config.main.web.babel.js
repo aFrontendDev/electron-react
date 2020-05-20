@@ -35,6 +35,9 @@ module.exports = {
             options: {
               sourceMap: true
             }
+          },
+          {
+            loader: 'postcss-loader'
           }
         ]
       },
@@ -53,6 +56,9 @@ module.exports = {
               },
               sourceMap: true
             }
+          },
+          {
+            loader: 'postcss-loader'
           }
         ]
       },
@@ -69,6 +75,9 @@ module.exports = {
               sourceMap: true,
               importLoaders: 1
             }
+          },
+          {
+            loader: 'postcss-loader'
           },
           {
             loader: 'sass-loader',
@@ -94,6 +103,9 @@ module.exports = {
               importLoaders: 1,
               sourceMap: true
             }
+          },
+          {
+            loader: 'postcss-loader'
           },
           {
             loader: 'sass-loader',
@@ -124,7 +136,6 @@ module.exports = {
   },
 
   plugins: [
-    new CleanWebpackPlugin(),
     new CleanWebpackPlugin({ cleanStaleWebpackAssets: false }),
     new HtmlWebpackPlugin({
       template: './app/app.html'
