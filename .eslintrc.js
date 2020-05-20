@@ -5,8 +5,7 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-one-expression-per-line': 'off',
-    'react/no-unescaped-entities': 'off',
-    'no-console': 'off'
+    'react/no-unescaped-entities': 'off'
   },
   settings: {
     'import/resolver': {
