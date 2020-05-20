@@ -47,3 +47,9 @@
     @include blockWidth(3);
   }
 }
+
+.block--single {
+  @media (min-width: #{$bpdEM}em) {
+    @include blockWidth(1);
+  }
+}

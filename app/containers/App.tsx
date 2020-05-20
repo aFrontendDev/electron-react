@@ -4,8 +4,9 @@ import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { CloseMenu } from 'actions/menu';
 import { AllState } from 'types/_all.type';
-import Header from '../components/header/Header';
-import SlideOutMenu from '../components/slideOutMenu/SlideOutMenu';
+import Header from 'components/header/Header';
+import SlideOutMenu from 'components/slideOutMenu/SlideOutMenu';
+import LayoutOverlay from 'components/layoutOverlay/LayoutOverlay';
 
 type Props = {
   children: ReactNode;
@@ -37,6 +38,7 @@ const App = (props: Props) => {
       <Header />
       <SlideOutMenu />
       {children}
+      <LayoutOverlay />
     </>
   );
 };

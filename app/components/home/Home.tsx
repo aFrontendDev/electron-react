@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { jsonObjectType } from 'types/generics.type';
 import { getReq } from 'helpers/fetch.helper';
 import routes from 'constants/routes.json';
-import Btn from 'elements/btn/Btn';
-import Picture from 'elements/picture/Picture';
-import electronImg from 'assets/images/electron.png';
-import IconParty from 'elements/icons/IconParty';
-import styles from './Home.scss';
 
 const Home = () => {
   const [randomData, setRandomData] = useState(null);
+  const routesObj: jsonObjectType = routes;
 
   const getData = async () => {
     const data = await getReq({ url: 'https://reqres.in/api/users?page=2' });
@@ -32,7 +29,19 @@ const Home = () => {
   return (
     <div className="block block--full">
       <h2>Home</h2>
-      <Link to={routes.COUNTER}>to Counter</Link>
+      <br />
+
+      <Link to={routesObj.COUNTER}>to Counter</Link>
+      <br />
+      <br />
+
+      <Link to={routesObj.STYLEGUIDE}>to Styleguide</Link>
+      <br />
+      <br />
+
+      <Link to={routesObj.LAYOUT}>to Layout</Link>
+      <br />
+      <br />
     </div>
   );
 };

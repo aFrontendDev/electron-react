@@ -7,11 +7,13 @@ import LayoutA from '../LayoutA';
 import styles from './Styleguide.scss';
 
 const IconsPage = () => {
+  const routesObj: jsonObjectType = routes;
+
   return (
     <LayoutA>
       <div className="block block--full">
         <h2 className={styles.title}>Styleguide</h2>
-        <Link to={routes.STYLEGUIDE}>Back to styleguide</Link>
+        <Link to={routesObj.STYLEGUIDE}>Back to styleguide</Link>
       </div>
 
       <div className="block block--full">
