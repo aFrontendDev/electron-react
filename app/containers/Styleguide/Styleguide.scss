@@ -1,0 +1,24 @@
+@import '../../styles/_00-settings/variables.scss';
+
+.title {
+  margin-bottom: $vr;
+}
+
+.img-fig {
+  padding: 10px;
+  width: 100%;
+
+  @media (min-width: #{$bpcEM}em) {
+    width: 50%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.icon {
+  display: inline-block;
+  margin-left: 10px;
+  width: 30px;
+}

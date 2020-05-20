@@ -1,3 +1,10 @@
+@import 'styles/_00-settings/variables.scss';
+
+.title {
+  margin-bottom: $vr * 2;
+}
+
 .example-block {
+  padding: $vr * 2 $ggw;
   background-color: pink;
 }

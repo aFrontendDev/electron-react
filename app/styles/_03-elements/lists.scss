@@ -1,1 +1,6 @@
-/* stylelint-disable */
+ul,
+ol {
+  li {
+    margin: $vr 0;
+  }
+}

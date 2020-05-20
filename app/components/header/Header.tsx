@@ -3,7 +3,7 @@ import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { OpenMenu, CloseMenu } from 'actions/menu';
-import { AllState } from 'types/_all';
+import { AllState } from 'types/_all.type';
 import routes from 'constants/routes.json';
 import styles from './Header.scss';
 

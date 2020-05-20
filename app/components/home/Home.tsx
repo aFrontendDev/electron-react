@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import Btn from 'elements/btn/Btn';
 import { getReq } from 'helpers/fetch.helper';
 import routes from 'constants/routes.json';
+import Btn from 'elements/btn/Btn';
 import Picture from 'elements/picture/Picture';
 import electronImg from 'assets/images/electron.png';
 import IconParty from 'elements/icons/IconParty';
@@ -30,54 +30,9 @@ const Home = () => {
   }, [randomData]);
 
   return (
-    <div className={styles.container} data-tid="container">
-      <div className="block block--full">
-        <h2>Home</h2>
-        <Link to={routes.COUNTER}>to Counter</Link>
-
-        <div className={styles.icon}>
-          <IconParty />
-        </div>
-      </div>
-
-      <h3>Button examples</h3>
-      <div className="block block--full">
-        <Btn>this is a basic button</Btn>
-      </div>
-      <div className="block block--half">
-        <Btn primary clickHandler={() => console.log('click')}>
-          this is a primary button
-        </Btn>
-      </div>
-      <div className="block block--half">
-        <Btn secondary data-test="spread extra props">
-          this is a secondary button
-        </Btn>
-      </div>
-      <div>
-        <Btn disabled clickHandler={() => console.log('disabled click')}>
-          this is a disabled button
-        </Btn>
-      </div>
-
-      <div className={styles['img-container']}>
-        <figure className={styles['img-fig']}>
-          <Picture
-            largeImg={electronImg}
-            altText="electron logo"
-            imgLoaded={() => console.log('loaded 1')}
-          />
-        </figure>
-
-        <figure className={styles['img-fig']}>
-          <Picture
-            largeImg="https://placeimg.com/640/480/people"
-            smallImg="https://placeimg.com/320/250/tech"
-            altText="random img"
-            imgLoaded={() => console.log('loaded 2')}
-          />
-        </figure>
-      </div>
+    <div className="block block--full">
+      <h2>Home</h2>
+      <Link to={routes.COUNTER}>to Counter</Link>
     </div>
   );
 };

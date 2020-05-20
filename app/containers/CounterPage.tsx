@@ -7,7 +7,7 @@ import {
   IncrementIfOdd,
   IncrementAsyncAction
 } from '../actions/counter';
-import { AllState } from '../types/_all';
+import { AllState } from '../types/_all.type';
 
 const mapStateToProps = (state: AllState) => {
   const { counter } = state;

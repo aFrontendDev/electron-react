@@ -5,7 +5,7 @@
     max-width: $layoutMaxWidth;
     margin: 0 $ggw;
 
-    @media (min-width: #{$bpdEM}em) {
+    @media (min-width: #{$bplayoutEM}em) {
       margin: 0 auto;
     }
   }
@@ -23,6 +23,7 @@
 
 .block {
   width: 100%;
+  margin-bottom: $vr;
 
   @media (min-width: #{$bpdEM}em) {
     @include fluidMarginRight($ggw, $layoutWidthInner);

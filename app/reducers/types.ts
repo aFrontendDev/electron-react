@@ -1,5 +1,5 @@
 import { Dispatch as ReduxDispatch, Store as ReduxStore, Action } from 'redux';
-import { AllState } from '../types/_all';
+import { AllState } from '../types/_all.type';
 
 export type GetState = () => AllState;
 

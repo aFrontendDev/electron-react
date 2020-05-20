@@ -2,5 +2,9 @@
   "HOME": "/",
   "COUNTER": "/counter",
   "LAYOUT": "/layout",
-  "TEST": "/test"
+  "TEST": "/test",
+  "STYLEGUIDE": "/styleguide",
+  "STYLEGUIDE/BUTTONS": "/styleguide/buttons",
+  "STYLEGUIDE/PICTURE": "/styleguide/picture",
+  "STYLEGUIDE/ICONS": "/styleguide/icons"
 }

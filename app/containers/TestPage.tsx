@@ -4,7 +4,7 @@ import LayoutA from './LayoutA';
 const TestPage = () => {
   return (
     <LayoutA>
-      <div>TEST TEST TEST</div>
+      <div>TEST PAGE</div>
     </LayoutA>
   );
 };
