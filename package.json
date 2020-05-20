@@ -30,6 +30,8 @@
     "prestart": "yarn build",
     "runweb-mac": "yarn build-web && cd ./app && open http://localhost:9001 && node server.js",
     "runweb-win": "yarn build-web && cd ./app && start http://localhost:9001 && node server.js",
+    "web-mac": "yarn build-web && cd ./app && open http://localhost:9001 && node server.js",
+    "web-win": "yarn build-web && cd ./app && start http://localhost:9001 && node server.js",
     "start": "cross-env NODE_ENV=production electron ./app/main.prod.js",
     "start-main-dev": "cross-env START_HOT=1 NODE_ENV=development electron -r ./internals/scripts/BabelRegister ./app/main.dev.ts",
     "start-renderer-dev": "cross-env NODE_ENV=development webpack-dev-server --config configs/webpack.config.renderer.dev.babel.js",

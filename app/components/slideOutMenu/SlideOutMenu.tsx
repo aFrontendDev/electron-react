@@ -3,7 +3,8 @@ import { bindActionCreators, Dispatch } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { CloseMenu } from 'actions/menu';
-import { AllState } from 'types/_all';
+import { AllState } from 'types/_all.type';
+import { jsonObjectType } from 'types/generics.type';
 import routes from 'constants/routes.json';
 import styles from './SlideOutMenu.scss';
 
@@ -20,6 +21,8 @@ const SlideOutMenu = (props: Props) => {
   };
 
   const menuInClass = menuOpen ? styles['container--open'] : '';
+  const routesObject: jsonObjectType = routes;
+  const routesArr = Object.keys(routesObject);
 
   return (
     <div className={`${styles.container} ${menuInClass}`}>
@@ -40,8 +43,14 @@ const SlideOutMenu = (props: Props) => {
         </button>
       </div>
       <nav className={styles.nav}>
-        <Link to={routes.HOME}>Home</Link>
-        <Link to={routes.COUNTER}>Counter</Link>
+        {routesArr.map((route: string) => {
+          const routeName = routesObject[route];
+          return (
+            <Link key={route} to={routeName}>
+              {route}
+            </Link>
+          );
+        })}
       </nav>
     </div>
   );

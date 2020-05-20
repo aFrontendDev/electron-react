@@ -31,11 +31,13 @@ const Home = () => {
 
   return (
     <div className={styles.container} data-tid="container">
-      <h2>Home</h2>
-      <Link to={routes.COUNTER}>to Counter</Link>
+      <div className="block block--full">
+        <h2>Home</h2>
+        <Link to={routes.COUNTER}>to Counter</Link>
 
-      <div className={styles.icon}>
-        <IconParty />
+        <div className={styles.icon}>
+          <IconParty />
+        </div>
       </div>
 
       <h3>Button examples</h3>
