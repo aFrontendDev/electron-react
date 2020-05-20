@@ -1,0 +1,16 @@
+{
+  "name": "visual-regression",
+  "version": "1.0.0",
+  "description": "testing the app through visual regression.",
+  "main": "index.js",
+  "scripts": {
+    "tests": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^4.5.0",
+    "cypress-xpath": "^1.4.0"
+  },
+  "dependencies": {}
+}
