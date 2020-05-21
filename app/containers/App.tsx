@@ -1,7 +1,6 @@
 import React, { ReactNode, useEffect, useState } from 'react';
 import { RouteComponentProps, withRouter } from 'react-router-dom';
-import { bindActionCreators, Dispatch } from 'redux';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { CloseMenu } from 'actions/menu';
 import { AllState } from 'types/_all.type';
 import Header from 'components/header/Header';
@@ -11,17 +10,17 @@ import LayoutOverlay from 'components/layoutOverlay/LayoutOverlay';
 type Props = {
   children: ReactNode;
   location: RouteComponentProps;
-  dispatchCloseMenu: () => void;
-  menuOpen: boolean;
 };
 
 const App = (props: Props) => {
-  const { children, location, menuOpen, dispatchCloseMenu } = props;
+  const { children, location } = props;
   const [storedLocation, setStoredLocation] = useState(location);
+  const menuOpen = useSelector((state: AllState) => state?.menu?.menuOpen);
+  const dispatch = useDispatch();
 
   const closeMenu = () => {
     if (menuOpen) {
-      dispatchCloseMenu();
+      dispatch(CloseMenu());
     }
   };
 
@@ -43,14 +42,4 @@ const App = (props: Props) => {
   );
 };
 
-const mapStateToProps = (state: AllState) => {
-  return {
-    menuOpen: state.menu.menuOpen
-  };
-};
-
-const mapDispatchToProps = (dispatch: Dispatch) => {
-  return bindActionCreators({ dispatchCloseMenu: CloseMenu }, dispatch);
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(App));
+export default withRouter(App);

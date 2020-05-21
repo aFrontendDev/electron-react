@@ -1,26 +1,20 @@
 import React from 'react';
-import { bindActionCreators, Dispatch } from 'redux';
-import { connect } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { OpenMenu, CloseMenu } from 'actions/menu';
 import { AllState } from 'types/_all.type';
 import routes from 'constants/routes.json';
 import styles from './Header.scss';
 
-type Props = {
-  dispatchOpenMenu: () => void;
-  dispatchCloseMenu: () => void;
-  menuOpen: boolean;
-};
-
-const Header = (props: Props) => {
-  const { dispatchOpenMenu, dispatchCloseMenu, menuOpen } = props;
+const Header = () => {
+  const menuOpen = useSelector((state: AllState) => state?.menu?.menuOpen);
+  const dispatch = useDispatch();
 
   const handleMenuClick = () => {
     if (menuOpen) {
-      dispatchCloseMenu();
+      dispatch(CloseMenu());
     } else {
-      dispatchOpenMenu();
+      dispatch(OpenMenu());
     }
   };
 
@@ -50,20 +44,4 @@ const Header = (props: Props) => {
   );
 };
 
-const mapStateToProps = (state: AllState) => {
-  return {
-    menuOpen: state?.menu?.menuOpen
-  };
-};
-
-const mapDispatchToProps = (dispatch: Dispatch) => {
-  return bindActionCreators(
-    {
-      dispatchOpenMenu: OpenMenu,
-      dispatchCloseMenu: CloseMenu
-    },
-    dispatch
-  );
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Header);
+export default Header;
