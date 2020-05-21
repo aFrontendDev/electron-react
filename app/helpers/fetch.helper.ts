@@ -1,6 +1,7 @@
-import { fetchReqType, fetchGetType, fetchPostType } from '../types/fetch.type';
+import { fetchReqType, fetchGetType, fetchPostType } from 'types/fetch.type';
+import { jsonObjectType } from 'types/generics.type';
 
-const converToQS = (obj: object) =>
+const converToQS = (obj: jsonObjectType) =>
   Object.keys(obj)
     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(obj[key])}`)
     .join('&');
@@ -9,16 +10,15 @@ export const request = async (data: fetchReqType) => {
   const { url, params, method = 'GET' } = data || {};
   let fetchUrl = `${url}`;
 
-  const options = {
+  const options: RequestInit = {
     method,
-    headers: {
-      'Content-Type': 'application/json'
-    }
+    headers: { 'Content-Type': 'application/json' }
   };
 
   if (params) {
     if (method === 'GET') {
-      fetchUrl = `${url}?${converToQS(params)}`;
+      const paramsString: string = converToQS(params);
+      fetchUrl = `${url}?${paramsString}`;
     } else {
       options.body = JSON.stringify(params);
     }

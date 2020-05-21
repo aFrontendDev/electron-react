@@ -8,8 +8,8 @@ import SlideOutMenu from 'components/slideOutMenu/SlideOutMenu';
 import LayoutOverlay from 'components/layoutOverlay/LayoutOverlay';
 
 type Props = {
-  children: ReactNode;
-  location: RouteComponentProps;
+  children?: ReactNode | null;
+  location?: RouteComponentProps;
 };
 
 const App = (props: Props) => {
