@@ -7,6 +7,7 @@ import webpack from 'webpack';
 import merge from 'webpack-merge';
 import TerserPlugin from 'terser-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import { TypedCssModulesPlugin } from 'typed-css-modules-webpack-plugin';
 import baseConfig from './webpack.config.base';
 import CheckNodeEnv from '../internals/scripts/CheckNodeEnv';
 import DeleteSourceMaps from '../internals/scripts/DeleteSourceMaps';
@@ -61,6 +62,10 @@ export default merge.smart(baseConfig, {
       DEBUG_PROD: false,
       START_MINIMIZED: false,
       E2E_BUILD: false
+    }),
+
+    new TypedCssModulesPlugin({
+      globPattern: 'app/**/*.{css,scss,sass}'
     })
   ],
 
