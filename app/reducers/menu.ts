@@ -1,11 +1,7 @@
 import { Action } from 'redux';
-import { OPEN_MENU, CLOSE_MENU } from '../types/menu.type';
+import { OPEN_MENU, CLOSE_MENU, MenuType } from '../types/menu.type';
 
-type menuState = {
-  menuOpen: boolean;
-};
-
-const initialState: menuState = {
+const initialState: MenuType = {
   menuOpen: false
 };
 
