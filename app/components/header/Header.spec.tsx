@@ -1,5 +1,4 @@
 /* eslint react/jsx-props-no-spreading: off */
-import { spy } from 'sinon';
 import React from 'react';
 import { Provider } from 'react-redux';
 import Enzyme, { mount } from 'enzyme';
@@ -13,21 +12,16 @@ Enzyme.configure({ adapter: new Adapter() });
 function setup() {
   const initialState = { menu: { menuOpen: false } };
   const store = configureStore(initialState);
-  const actions = {
-    dispatchOpenMenu: spy(),
-    dispatchCloseMenu: spy()
-  };
   const provider = (
     <Provider store={store}>
       <Router>
-        <Header {...actions} />
+        <Header />
       </Router>
     </Provider>
   );
   const app = mount(provider);
   return {
     app,
-    actions,
     menubutton: app.find('[data-test-id="menu-btn"]')
   };
 }

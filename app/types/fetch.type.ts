@@ -1,15 +1,17 @@
+import { jsonObjectType } from 'types/generics.type';
+
 export type fetchReqType = {
   url: string;
-  params?: object;
+  params?: jsonObjectType;
   method?: string;
 };
 
 export type fetchGetType = {
-  params?: object;
+  params?: jsonObjectType;
   url: string;
 };
 
 export type fetchPostType = {
-  params?: object;
+  params?: jsonObjectType;
   url: string;
 };
