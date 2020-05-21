@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { jsonObjectType } from 'types/generics.type';
 import routes from 'constants/routes.json';
-// import electronImg from 'assets/images/electron.png';
 import Picture from 'elements/picture/Picture';
 import LayoutA from '../LayoutA';
 import styles from './Styleguide.scss';
