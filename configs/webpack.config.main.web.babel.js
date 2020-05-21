@@ -1,3 +1,5 @@
+import { TypedCssModulesPlugin } from 'typed-css-modules-webpack-plugin';
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -143,6 +145,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css'
+    }),
+    new TypedCssModulesPlugin({
+      globPattern: 'app/**/*.{css,scss,sass}'
     })
   ],
 
