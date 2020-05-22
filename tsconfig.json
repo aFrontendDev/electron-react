@@ -23,6 +23,7 @@
     "allowJs": true,
     "baseUrl": "app"
   },
+  "include": ["app", "app/declarations.d.ts"],
   "exclude": [
     "test",
     "release",
